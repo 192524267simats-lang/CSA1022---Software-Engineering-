@@ -1,0 +1,2 @@
+Shared project notes
+Feature branch update: document the new feature and keep this line after resolving any merge conflict.

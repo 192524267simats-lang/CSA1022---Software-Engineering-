@@ -1,0 +1,8 @@
+git switch main
+git pull origin main
+git switch feature-update
+git merge main
+# If conflict: edit files, remove conflict markers, test, then:
+git add <resolved-file>
+git commit -m "Resolve merge conflict"
+git push origin feature-update
