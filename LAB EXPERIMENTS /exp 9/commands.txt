@@ -1,0 +1,8 @@
+git clone <your-fork-url>
+cd <repository>
+git switch -c feature-update
+# edit files
+git add .
+git commit -m "Add sample feature"
+git push -u origin feature-update
+# Open a pull request on GitHub from feature-update to upstream main.
