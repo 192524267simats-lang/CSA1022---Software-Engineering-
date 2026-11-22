@@ -1,0 +1,9 @@
+pipeline {
+  agent any
+  stages {
+    stage('Checkout') { steps { checkout scm } }
+    stage('Build image') { steps { sh 'docker build -t csa10-sample:latest .' } }
+    stage('Test') { steps { sh 'python -m compileall .' } }
+    stage('Deploy locally') { steps { sh 'docker rm -f csa10-sample || true' ; sh 'docker run -d --name csa10-sample -p 8080:80 csa10-sample:latest' } }
+  }
+}
