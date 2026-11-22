@@ -1,0 +1,14 @@
+services:
+  frontend:
+    image: nginx:alpine
+    ports: ["8080:80"]
+  backend:
+    image: hashicorp/http-echo:1.0.0
+    command: ["-text=backend-ok"]
+    ports: ["8081:5678"]
+  database:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: labdb
+      POSTGRES_USER: labuser
+      POSTGRES_PASSWORD: change-me-for-local-demo
