@@ -1,0 +1,5 @@
+git clone <public-repository-url>
+cd <repository>
+# edit one file and save
+git diff
+# Experiment 21 asks for a small edit; commit/push is demonstrated in later experiments.
